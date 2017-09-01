@@ -33,7 +33,7 @@ export default function StudentList(props){
                     <td>{student.email}</td>
                     <td><Button type="submit" value={student.id} onClick={props.handleSubmit} /></td>
                     <td>
-                            <Link to={"/updatestudent/" + student.id.toString()}>Update Info</Link>
+                        <Link to={"/updatestudent/" + student.id.toString()}>Update Info</Link>
                     </td>
                 </tr>
               )})

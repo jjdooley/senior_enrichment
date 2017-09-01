@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 
 function SingleCampus(props){
-    console.log('props:', props.campuses)
+    console.log('props:', props)
     const campSearch = function(x){return x.id === Number(props.match.params.id)}
     const studSearch = function(x){return x.campusId === Number(props.match.params.id)}
     const selectedCampus = props.campuses.find(campSearch)

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import StudentsList from '../components/StudentsList.js';
 import store, {deleteStudent} from '../store.jsx'
+import AllCampuses from '../components/AllCampuses'
 
 export class AllCampusesListContainer extends Component {
 
@@ -11,15 +12,7 @@ export class AllCampusesListContainer extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-  handleUpdateSubmit (evt) {
-    evt.preventDefault();
-    console.log(evt.target.value)
-    const studentId = evt.target.value;
-    this.props.updateCampus(studentId);
-  }
-
-  handleDeleteSubmit (evt) {
+  handleSubmit (evt) {
     evt.preventDefault();
     console.log(evt.target.value)
     const studentId = evt.target.value;
@@ -30,10 +23,7 @@ export class AllCampusesListContainer extends Component {
 
     return (
 
-      <StudentsList
-        campus={this.props.campus}
-        handleSubmit={this.handleSubmit}
-      />
+     <AllCampuses/>
     );   
   }
 }
